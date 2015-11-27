@@ -1,0 +1,11 @@
+/.bundle
+
+/log
+!/log/.keep
+/tmp
+/public
+
+*.rbc
+capybara-*.html
+.rspec
+*~
