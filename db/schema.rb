@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151128110742) do
+ActiveRecord::Schema.define(version: 20151128204215) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,17 @@ ActiveRecord::Schema.define(version: 20151128110742) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
+
+  create_table "rolls", force: :cascade do |t|
+    t.string   "suffix"
+    t.string   "location"
+    t.text     "comment"
+    t.integer  "textile_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "rolls", ["textile_id"], name: "index_rolls_on_textile_id", using: :btree
 
   create_table "textiles", force: :cascade do |t|
     t.string   "code"
@@ -40,5 +51,6 @@ ActiveRecord::Schema.define(version: 20151128110742) do
   add_index "textiles", ["code"], name: "index_textiles_on_code", unique: true, using: :btree
   add_index "textiles", ["group_id"], name: "index_textiles_on_group_id", using: :btree
 
+  add_foreign_key "rolls", "textiles"
   add_foreign_key "textiles", "groups"
 end
