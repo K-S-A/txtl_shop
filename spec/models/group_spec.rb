@@ -1,11 +1,7 @@
-require 'rails_helper'
-
 RSpec.describe Group, type: :model do
   subject { FactoryGirl.build(:group) }
 #Validate factory
-  it 'ensure factory validity' do
-    expect(subject).to be_valid(:textiles)
-  end
+  it 'ensure factory validity' do expect(subject).to be_valid; end
 # Associations tests
   it { expect(subject).to have_many(:textiles) }
 
