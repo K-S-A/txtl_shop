@@ -7,5 +7,4 @@
 
 *.rbc
 capybara-*.html
-.rspec
 *~
