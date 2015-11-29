@@ -1,7 +1,12 @@
 language: ruby
 rvm:
-  - 2.2.2
+- 2.2.2
 script:
 - export RAILS_ENV=test
 - bundle exec rake db:create db:schema:load db:test:prepare
 - bundle exec rspec
+deploy:
+  provider: heroku
+  app: voile
+  api_key:
+    secure: KUXCNOpp430tc3eN79sU+xYa2XChM/854VmxIlIu9CgXX1rMwRh1t8tUq+Ho/nJoknyubISPJAu6dfJU5nqbuTzGEM3t9oLjdWPccuHS7TWfe5uIxoiD8lRvJDmf+yi24F/Dn1G/EPRwiOxzMUuFuXm5XWgPK1SMPqLnp14AT0v4fAad6CG/SivKaReLuS2jND5xW/2J8P5nA4xgRvQyjyhVrqt+QjV4HegWZdNFq6Zdb9Uf/FCgE48C2OWDyWubs52QlsufuRMsGFMbcOcvFl4mQqGNWRM9cwsLMomyP9VOo00ZSzUpTJyZXRIZHhEhGu/HQj7ASfDT8VVNXBNX0ZO9oGxyHeOPSTYtm+f2nLq9CfPTowAdp68W/9rMnUY/PL/ZhfVCb2OV9W/GZgtvwL0zJVEo7T1Hg9UmM/7OWQQrdAMYbBB7uexWI1f2nJ0c4FTwJimFGR/K+P5jqU1CGTMb4tKkY7R7lzYmAE9U+jL9JUumSIl5FU59fkaoloAdmk2H4BQ96g9ajHPykLlrtsjG/h6UH+oHvcrNCXXIYfHlO9prQ49XEBkw4i8OGMleKsud3bT0FGezC5B9mvpHbubvL4gLu7bVe+ZcxeoWTAJKYkuVzRoiSkdbiy2A1MMBro7ui4jlinLYoWobqRhvSX4bO8FGVWF1tCgtIs5O0G4=

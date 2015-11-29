@@ -5,6 +5,7 @@
 /tmp
 /public
 
+*.log
 *.rbc
 capybara-*.html
 *~

@@ -12,6 +12,7 @@ gem 'responders', '~> 2.1'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.3'
+  gem 'travis', '~> 1.8'
 end
 
 group :test do
