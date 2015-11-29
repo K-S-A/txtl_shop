@@ -183,7 +183,7 @@ DEPENDENCIES
   fuubar (~> 2.0)
   jbuilder (~> 2.0)
   jquery-rails
-  pg
+  pg (~> 0.18.4)
   rails (= 4.2.4)
   responders (~> 2.1)
   rspec-rails (~> 3.3)
