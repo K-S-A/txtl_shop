@@ -12,12 +12,12 @@ gem 'responders', '~> 2.1'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.3'
+  gem 'factory_girl_rails', '~> 4.5'
   gem 'travis', '~> 1.8'
 end
 
 group :test do
   gem 'shoulda-matchers', '~> 2.8.0'
-  gem 'factory_girl_rails', '~> 4.5'
   gem 'capybara', '~> 2.5'
   gem 'database_cleaner', '~> 1.5'
   gem 'faker', '~> 1.6'

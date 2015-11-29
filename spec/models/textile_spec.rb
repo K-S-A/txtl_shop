@@ -13,9 +13,8 @@ RSpec.describe Textile, type: :model do
     it { expect(subject).to validate_length_of(:code).
       is_at_least(3).
       is_at_most(10) }
-    it { expect(subject).to allow_value("p150578").for(:code) }
-    it { expect(subject).not_to allow_value("P150578").for(:code) }
-    it { expect(subject).not_to allow_value("p_150578").for(:code) }
+    include_examples "allowed values for attribute", :code, %w(p150578)
+    include_examples "not allowed values for attribute", :code, %w(P150578, p_150578)
 
     it { expect(subject).to validate_presence_of(:name) }
     it { expect(subject).to validate_length_of(:name).
@@ -25,11 +24,8 @@ RSpec.describe Textile, type: :model do
     it { expect(subject).to allow_value("Some_name").for(:name) }
 
     it { expect(subject).to validate_length_of(:country).is_equal_to(2) }
-    it { expect(subject).to allow_value(nil).for(:country) }
-    it { expect(subject).to allow_value("TR").for(:country) }
-    it { expect(subject).not_to allow_value("tr").for(:country) }
-    it { expect(subject).not_to allow_value("tR").for(:country) }
-    it { expect(subject).not_to allow_value("Tr").for(:country) }
+    include_examples "allowed values for attribute", :country, [nil, 'TR']
+    include_examples "not allowed values for attribute", :country, %w(tr tR Tr)
 
     it { expect(subject).to validate_presence_of(:units) }
     it { expect(subject).to validate_inclusion_of(:units).in_array(%w(m pcs)) }

@@ -7,12 +7,10 @@ RSpec.describe Roll, type: :model do
     it { expect(subject).to belong_to(:textile) }
   end
   context 'Validation' do
+    include_examples "allowed values for attribute", :suffix, %w(3 g)
+    include_examples "not allowed values for attribute", :suffix, %w(\  / G)
     it { expect(subject).to validate_presence_of(:suffix) }
     it { expect(subject).to validate_length_of(:suffix).is_equal_to(1) }
-    it { expect(subject).to allow_value('g').for(:suffix) }
-    it { expect(subject).to allow_value('3').for(:suffix) }
-    it { expect(subject).not_to allow_value('G').for(:suffix) }
-    it { expect(subject).not_to allow_value('/').for(:suffix) }
     it { subject.save; expect(subject).to validate_uniqueness_of(:suffix).
       scoped_to(:textile_id) }
 

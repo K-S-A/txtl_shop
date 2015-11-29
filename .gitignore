@@ -5,6 +5,7 @@
 /tmp
 /public
 
+/vendor/bundle
 *.log
 *.rbc
 capybara-*.html
