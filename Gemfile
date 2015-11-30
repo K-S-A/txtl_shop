@@ -11,6 +11,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'responders', '~> 2.1'
 gem 'haml-rails', '~> 0.9.0'
 gem 'bower-rails', '~> 0.10.0'
+gem 'execjs', '~> 2.6'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.3'
