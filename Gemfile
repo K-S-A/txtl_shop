@@ -9,6 +9,8 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'responders', '~> 2.1'
+gem 'haml-rails', '~> 0.9.0'
+gem 'bower-rails', '~> 0.10.0'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.3'
