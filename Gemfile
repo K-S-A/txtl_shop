@@ -18,6 +18,10 @@ group :development, :test do
   gem 'travis', '~> 1.8'
 end
 
+group :production do
+  gem 'rails_12factor', '~> 0.0.3'
+end
+
 group :test do
   gem 'shoulda-matchers', '~> 2.8.0'
   gem 'capybara', '~> 2.5'
