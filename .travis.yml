@@ -8,6 +8,7 @@ script:
 - export RAILS_ENV=test
 - bundle exec rake db:create db:schema:load db:test:prepare
 - bundle exec rspec
+- bundle exec rspec --tag js
 deploy:
   provider: heroku
   app: voile
