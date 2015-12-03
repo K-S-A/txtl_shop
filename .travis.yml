@@ -1,6 +1,9 @@
 language: ruby
 rvm:
 - 2.2.2
+before_install:
+  addons:
+    firefox: "43.0"
 before_script:
   - npm install -g bower
   - bower install
