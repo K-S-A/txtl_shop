@@ -6,11 +6,12 @@
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags
-  %body
+  %body{data: {ng_app: "storeApp"}}
     %nav.navbar.navbar-default.navbar-fixed-top
       .container
         %ul.nav.navbar-nav.navbar-right
           %li
-            %a{href: "#"} Register
+            %a{data: {ui_sref: "register"}} Register
           %li
-            %a{href: "#"} Sign in
+            %a{data: {ui_sref: "login"}} Sign in
+    %ui-view

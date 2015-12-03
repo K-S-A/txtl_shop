@@ -12,6 +12,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'responders', '~> 2.1'
 gem 'haml-rails', '~> 0.9.0'
 gem 'devise', '~> 3.5'
+gem 'angular-rails-templates', '~> 0.2.0'
 
 group :production do
   gem 'rails_12factor', '~> 0.0.3'
