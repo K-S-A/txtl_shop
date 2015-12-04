@@ -1,6 +1,8 @@
 {
   "name": "voile",
   "version": "0.0.0",
+  "repository": "K-S-A/txtl_shop",
+  "license": "UNLICENSED",
   "dependencies": {
     "bower": "~1.6.8"
   },
@@ -10,8 +12,5 @@
   },
   "scripts": {
     "postinstall": "./node_modules/bower/bin/bower install"
-  },
-  "devDependencies": {
-    "karma": "^0.13.15"
   }
 }

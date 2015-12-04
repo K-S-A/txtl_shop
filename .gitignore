@@ -7,6 +7,7 @@
 
 /vendor/bundle
 /vendor/assets
+/node_modules
 *.log
 *.rbc
 capybara-*.html
