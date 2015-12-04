@@ -4,7 +4,7 @@
   "repository": "K-S-A/txtl_shop",
   "license": "UNLICENSED",
   "dependencies": {
-    "bower": "~1.6.4"
+    "bower": "~1.6.0"
   },
   "engine": {
     "node": "5.0.0",
